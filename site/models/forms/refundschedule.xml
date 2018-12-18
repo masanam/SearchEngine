@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="start_date" type="calendar"
+			label="COM_REFUND_LBL_SCHEDULE_FROM"
+			description="COM_REFUND_LBL_SCHEDULE_FROM"
+			class="form-refund"
+			required="true"
+		/>
+		<field name="end_date" type="calendar"
+			label="COM_REFUND_LBL_SCHEDULE_TO"
+			description="COM_REFUND_LBL_SCHEDULE_TO"
+			class="form-refund"
+			required="true"
+		/>
+		<field name="user_id"
+			type="user"
+			label="COM_CONTACT_FIELD_LINKED_USER_LABEL"
+			description="COM_CONTACT_FIELD_LINKED_USER_DESC"
+		/>
+		<field name="select_day"
+			type="list"
+			class="form-refund"
+			>
+			<option value="monday">
+				MONDAY</option>
+			<option value="tuesday">
+				TUESDAY</option>
+			<option value="wednesday">
+				WEDNESDAY</option>
+			<option value="thursday">
+				THURSDAY</option>
+			<option value="friday">
+			FRIDAY</option>
+			<option value="saturday">
+			SATURDAY</option>
+			<option value="sunday">
+			SUNDAY</option>
+		</field>	
+		
+		<field name="distributebycalendar" type="calendar"
+			label="COM_REFUND_LBL_DISTRIBUTE_BY_CALENDAR"
+			description="COM_REFUND_LBL_DISTRIBUTE_BY_CALENDAR"
+			class="form-refund"
+		/>
+	</fieldset>
+		
+
+</form>

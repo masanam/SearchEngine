@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+		
+        <field name="id" type="hidden"
+               class="inputbox"
+               description="Enter email address to filter"
+               label="JGLOBAL_EMAIL"
+               size="20"
+		/>
+		
+        <field name="paypal_account" type="text"
+               class="inputbox"
+               description="Paypal Account"
+               label="Paypal Account"
+               size="20"
+               validate="email"
+		/>
+		
+        <field name="sandbox_account" type="text"
+               class="inputbox"
+               description="Sandbox Account"
+               label="Sandbox Account"
+               size="20"
+               validate="email"
+		/>
+		
+        <field name="return_url" type="text"
+               class="inputbox"
+               description="Return Url"
+               label="Return Url"
+               size="20"
+		/>
+		
+        <field name="notify_url" type="text"
+               class="inputbox"
+               description="Notify Url"
+               label="Notify Url"
+               size="20"
+		/>
+		
+	</fieldset>
+</form>

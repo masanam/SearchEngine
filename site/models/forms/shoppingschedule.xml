@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="start_date" type="calendar"
+			label="COM_REFUND_LBL_SCHEDULE_FROM"
+			description="COM_REFUND_LBL_SCHEDULE_FROM"
+			class="form-refund"
+		/>
+		<field name="end_date" type="calendar"
+			label="COM_REFUND_LBL_SCHEDULE_TO"
+			description="COM_REFUND_LBL_SCHEDULE_TO"
+			class="form-refund"
+		/>
+		<field name="distributebycalendar" type="calendar"
+			label="COM_REFUND_LBL_DISTRIBUTE_BY_CALENDAR"
+			description="COM_REFUND_LBL_DISTRIBUTE_BY_CALENDAR"
+			class="form-refund"
+		/>
+	</fieldset>
+		
+
+</form>

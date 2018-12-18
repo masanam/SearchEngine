@@ -1,0 +1,181 @@
+<?php
+$listData =& $this->listData;
+//print_r($listData);
+//echo $this->packageId;	
+?>
+<style>
+.tableresponsive{
+display:inline-block;
+overflow-x:scroll;
+}
+</style>
+<div class="navbar">
+	<div class="navbar-inner" style="background-color: #fafafa;">	
+		<div class="header-container">
+			<div class="cq-nav-collapse nav-collapse collapse">
+				<ul class="nav">					
+					<li>
+						<a class="btn margin-bottom-10" href="<?php echo JRoute::_('index.php?option=com_searchengine&view=dashboard&layout=create');?>">
+							<?php echo JText::_('New search engine');?>
+						</a>						
+					</li>
+					<li>
+						&nbsp;&nbsp;&nbsp;<button class="btn margin-bottom-10" type="button" onclick=" Joomla.submitbutton('remove');"><i class="fa fa-times"></i> <?php echo JText::_('Delete');?></button>						
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="top_table">
+<table align="center" border="0" class="table table-hover table-striped tableresponsive">
+        <thead>
+            <tr style="text-align:center; background-color:#CCCCCC">
+				<th width="1%" align="center"><input type="checkbox" name="checkall-toggle"
+				value="on" title="<?php echo JText::_('JGLOBAL_CHECK_ALL'); ?>"
+				onclick="Joomla.checkAll(this)" /></th>
+                <th><?php echo JText::_('User');?></th>
+                <th><?php echo JText::_('Email');?></th>
+                <th><?php echo JText::_('Rewards Name');?></th>
+                <th><?php echo JText::_('Start Publish Date');?></th>
+                <th><?php echo JText::_('End Publish Date');?></th>
+                <th><?php echo JText::_('Search Engine User Group');?></th>
+                <th><?php echo JText::_('Keyword Group');?></th>
+                <th><?php echo JText::_('Url rewards List');?></th>
+                <th><?php echo JText::_('Survey group');?></th>
+                <th><?php echo JText::_('Quiz group');?></th>
+                <th><?php echo JText::_('Created');?></th>
+                <th><?php echo JText::_('Item Status');?></th>
+            </tr>
+			</thead>
+            <?php
+			if( $this->listData ){
+            foreach ($listData as &$result)
+            {
+				
+				$user1	= JFactory::getUser($result->user_id);	
+            ?>
+            <tr style="text-align:center;">
+				<td align="center"><?php echo JHtml::_('grid.id', $i, $result->id); ?></td>	
+                <td><?php echo $user1->username;?></td>
+                <td><?php echo $user1->email;?></td>
+                <td>
+				<a href="<?php echo JRoute::_('index.php?option=com_searchengine&controller=dashboard&task=edit&cid='.$result->id); ?>"><?php echo $result->title; ?>
+				</a>
+				<?php //echo $result->title;?></td>                
+		<td align="center"><?php echo strtotime($result->created)>0 ? date('d M Y',strtotime($result->startpublishdate)): '-';?></td>
+                <td align="center"><?php echo strtotime($result->created)>0 ? date('d M Y',strtotime($result->endpublishdate)): '-';?></td>
+                <td>
+					<?php
+						if(!empty($result->usergroupfull))
+						{						
+							$usergroupfull=json_decode($result->usergroupfull);
+						}
+		
+						if(!empty($usergroupfull))
+						{
+							/*
+							foreach($usergroupfull as $key=>$value)
+							{
+								if(!empty($value) && $value!='null')
+								{
+									echo explode(',',$value)[1];
+								}
+							}
+							*/
+							if(!empty($usergroupfull) && $usergroupfull!='null')
+							{
+								echo explode(',',$usergroupfull)[1];
+							}
+						}
+					?>	
+				</td>
+                <td>
+					<?php
+						if(!empty($result->keywordgroupfull))
+						{						
+							$keywordgroupfull=json_decode($result->keywordgroupfull);
+						}		
+						if(!empty($keywordgroupfull))
+						{
+							if(!empty($keywordgroupfull) && $keywordgroupfull!='null')
+							{
+								echo explode(',',$keywordgroupfull)[1];
+							}
+						}
+					?>	
+				</td>
+                <td>
+					<?php
+						if(!empty($result->urlgroupfull))
+						{						
+							$urlgroupfull=json_decode($result->urlgroupfull);
+						}		
+						if(!empty($urlgroupfull))
+						{
+							if(!empty($urlgroupfull) && $urlgroupfull!='null')
+							{
+								echo explode(',',$urlgroupfull)[1];
+							}
+						}
+					?>	
+				</td>
+                <td>
+					<?php
+						if(!empty($result->surveygroupfull))
+						{						
+							$surveygroupfull=json_decode($result->surveygroupfull);
+						}		
+						if(!empty($surveygroupfull))
+						{
+							if(!empty($surveygroupfull) && $surveygroupfull!='null')
+							{
+								echo explode(',',$surveygroupfull)[1];
+							}
+						}
+					?>	
+				</td>
+                <td>
+					<?php
+						if(!empty($result->quizgroupfull))
+						{						
+							$quizgroupfull=json_decode($result->quizgroupfull);
+						}		
+						if(!empty($quizgroupfull))
+						{
+							if(!empty($quizgroupfull) && $quizgroupfull!='null')
+							{
+								echo explode(',',$quizgroupfull)[1];
+							}
+						}
+					?>	
+				</td>
+                <td align="center"><?php echo strtotime($result->created)>0 ? date('G:i a d M Y',strtotime($result->created)): '-';?></td>
+
+                <td><?php echo $result->surveycount+$result->quizcount+$result->urlgroupcount ?></td>
+
+            </tr>
+            <?php
+		
+		$i++;
+			}
+			}
+		else{
+		?>
+			<tr><td colspan="5">No records found</td></tr>
+		<?php
+		}
+		 ?>
+        
+    </table>
+	<table width="100%">
+                <tr><td style="text-align:right;">
+                <div class="pagination pagination-toolbar">
+                  <?php 
+                  echo $this->pagination;                  
+                ?>
+                </div>
+                </td></tr>
+              </table>
+</div>	

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Search Engine">
+		<message>
+			Displays Search Engine Menu on User Side
+		</message>
+	</layout>
+	<state>
+		<name>Search Engine</name>
+		<description>Displays List Menu on User Side.</description>
+	</state>
+</metadata>

@@ -1,0 +1,30 @@
+#cssmenu a { position: relative; }
+#cssmenu .aw-red-box { position: absolute;top: 0px;left: 7px; }
+#cssmenu .large_giftcode_value.aw-red-box {font-size: 9px;}
+.aw-resize .chzn-container { padding-bottom:10px; }
+.IP_calendarInput {background-position: 99% 50% !important; }
+#adminForm button { vertical-align: top; }
+#adminForm .aw-donation-div{ padding-top: 16px;}
+#adminForm .aw-donation-input{padding-top: 12px;}
+#adminForm .well{padding-bottom: 1px;padding-top: 5px;}
+#adminForm .well h2{padding-top:6px;margin-left:-7px; }
+#adminForm  .aw-btn-wrapper{margin-left: auto;margin-right: auto;text-align: center;}
+.aw-payment-method{padding-bottom: 5px;font-weight: bold;}
+#adminForm #message{ padding-left: 1px;	}
+.aw-table{margin-left: -11px;}
+.quiz-form label{width: 197px;}
+ul.aw-fund-list{list-style:none;margin: 0px;}
+.aw-fund-list li{line-height: 22px;}
+
+body.com_awardpackage #cj-wrapper .navbar-inner{
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	background:transparent;
+}
+
+body.com_awardpackage #cj-wrapper .quiz-toolbox .navbar-inner, body.com_awardpackage #cj-wrapper .survey-toolbox .navbar-inner{
+	border:1px solid #ccc;
+}
+
+ul.giftcode_button_list li{float:left!important;}
+

@@ -1,0 +1,219 @@
+body{
+	position:static;
+	font-family: Tahoma;
+	font-size:10pt;
+}
+
+table, select, input { 
+	font-family: Tahoma;
+	font-size: 10pt;
+	vertical-align:text-top;
+}
+a:link, a:visited {
+	color: #03C;
+}
+
+
+table.donation {
+	border-spacing: 0px;
+	border: solid 2px #ddd;
+	color: #333; margin-top:10px;
+	font: 13px "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+}
+
+table.donation td{
+	border-bottom: 2px solid #ddd;
+	padding:5px 15px;
+	background: #fff;
+	font: 11px "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+	line-height:1.5em;
+	vertical-align:middle;
+}
+table.donation th {
+	text-align: center;
+	padding:5px 15px;
+	background: url(img/gray-grad.png);
+	color: #333; font-weight:bold;
+	border-bottom: 4px solid #ddd;
+	width:25%;
+}
+
+
+table .donation tr:hover td{
+	background-color: #BDEDFF;
+	cursor: pointer;
+} 
+
+.kotak{
+    width: 50px; 
+    height: 40px; 
+    text-align: center;
+	font-size:30px;
+	font-weight:bold;
+	color:#fff;
+	padding-top:10px;
+
+}
+.judul{
+	font-size:20px;
+	font-weight:bold;
+	color:#2554C7;
+	margin-bottom:20px;
+}
+
+.formbox{
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+.color{
+	background: #F1F1F1;
+}
+
+#giftcode-tabs ul li {
+  list-style-type: none;
+  float: left;
+}
+
+#giftcode-tabs ul li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+#giftcode-tabs ul li a.active {
+  border: 3px dashed black;  
+}
+
+.giftcode-button{
+	cursor: pointer;
+}
+.giftcode-button a{
+	text-decoration: none;
+	display: block;
+}
+.giftcode-button a:hover{
+	background: none;
+}
+
+#div.content {
+	border: #48f solid 3px;
+	clear: left;
+	padding: 1em;
+}
+
+ol#toc {
+	height: 2em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol#toc a {
+	background: url(tabs.gif) 100% 0;
+	color: #008;
+	float: left;
+	line-height: 2em;
+	outline: none;
+	
+	text-decoration: none;
+	padding: 5px 10px 5px 5px;
+}
+
+ol#toc li.current {
+	background-color: #48f;
+	background-position: 0 -60px;
+}
+
+ol#toc li.current a {
+	background-position: 100% -60px;
+	color: #fff;
+	font-weight: bold;
+	padding: 5px 10px 5px 5px;
+}
+
+ol#toc li {
+	background: #bdf url(tabs.gif);
+	float: left;
+	margin: 0 1px 0 0;
+	padding-left: 5px;
+	
+}
+table.symbollist{
+    background-color: #F3F3F3;
+    border-spacing: 1px;
+    color: #666666;
+    width: 100%;
+}
+table.symbollist tbody tr {
+    background-color: #FFFFFF;
+    text-align: left;
+}
+table.symbollist tbody tr td {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    text-align: center;
+}
+ table.symbollist tbody tr.row1 td {
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-top: 1px solid #FFFFFF;
+}
+ table.symbollist tbody tr.row1:hover td,table.symbollist tbody tr.row0:hover td {
+    background: #E8F6FE
+}
+table.symbollist th{
+   text-align: center;
+   padding-top: 5px;
+   padding-bottom: 5px;
+    background: #CFCFCF;
+   
+}
+.adminlist td{
+    text-align: center;
+}
+.pieceslist{
+    margin: 10px;
+}	
+.clear{
+	clear: both;
+}
+.tableright{
+	float: right;
+	width: 200px;
+}
+.tableright label{
+	padding-top: 5px;
+	font-weight: bold;
+	
+}
+.select{
+	border: 1px solid #cccccc;
+	padding-left: 10px;
+}
+.select option{
+	padding-left: 10px;
+}
+.hr{
+	border-bottom: 1px solid #cccccc;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.btn{
+	border: 1px solid #cccccc;
+	margin-left: 250px;
+}
+
+.modal{
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
+.manage{
+	background: #f1f1f1;
+	padding: 5px;
+	border: 1px solid #666666;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 5px;
+}

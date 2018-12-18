@@ -1,0 +1,10 @@
+diff a/site/controllers/searchengine.php b/site/controllers/searchengine.php	(rejected hunks)
+@@ -57,7 +57,7 @@
+ 			$model->addInfo($data);
+          }
+ 		$msg = "";
+-		$this->setRedirect("index.php?option=com_searchengine&Itemid=".JRequest::getVar('Itemid')."&search=".JRequest::getVar('keyword')."&reward=".JRequest::getVar('reward')."&uid=".$data['uniqueid']."&type=".$search_type, $msg);
++		$this->setRedirect("index.php?option=com_searchengine&Itemid=".JRequest::getVar('Itemid')."&search=".JRequest::getVar('keyword')."&reward=".JRequest::getVar('reward')."&limitstart=".$limitstart."&uid=".$data['uniqueid']."&type=".$search_type, $msg);
+ 
+ 	}
+ 

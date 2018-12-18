@@ -1,0 +1,100 @@
+diff a/site/views/searchengine/view.html.php b/site/views/searchengine/view.html.php	(rejected hunks)
+@@ -33,7 +33,7 @@
+ 		$reward = JRequest::getVar('reward');
+ 
+ 		if(JRequest::getVar('search')){
+-		  $limitstart = (isset($_GET['limitstart']) ? $_GET['limitstart'] :0) ;
++		  $limitstart = (isset($_GET['limitstart']) ? $_GET['limitstart'] :10) ;
+ 			$search_keywords = JRequest::getVar('search'); // search keywords
+ 			$search_params = array('q'=>$search_keywords);
+ 			$options = array(
+@@ -142,20 +142,20 @@
+ 							$in = str_replace(' ','+',$in); // space is a +
+ 							//if search Type is All
+ 							if ($search_type === 'web'){
+-								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
+-								//$url ='http://www.google.com/search?q='.$in.'&num=100&hl=en&biw=1280&bih=612&prmd=ivns&start='.$limitstart.'&sa=N';
++								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
++								//$url ='http://www.google.com/search?q='.$in.'&num=100&hl=en&biw=1280&bih=612&prmd=ivns&start=".$limitstart."&sa=N';
+ 							}
+ 							elseif ($search_type === 'image'){ //if search Type is Images
+-								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 							}
+ 							elseif ($search_type === 'video'){ //if search Type is Videos
+-								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 							}
+ 							elseif ($search_type === 'news'){//if search Type is News
+-								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 							}
+ 							else{ //default All
+-								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++								$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 							}
+ 							//$date=	date("d M Y");
+ 							$date=	date("Y-m-d h:i:sa");
+@@ -382,20 +382,20 @@
+ 
+ 				//if search Type is All
+ 				if ($search_type === 'web'){
+-					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
+-					//$url ='http://www.google.com/search?q='.$in.'&num=100&hl=en&biw=1280&bih=612&prmd=ivns&start='.$limitstart.'&sa=N';
++					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
++					//$url ='http://www.google.com/search?q='.$in.'&num=100&hl=en&biw=1280&bih=612&prmd=ivns&start='.".$limitstart.".'&sa=N';
+ 				}
+ 				elseif ($search_type === 'image'){ //if search Type is Images
+-					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 				}
+ 				elseif ($search_type === 'video'){ //if search Type is Videos
+-					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 				}
+ 				elseif ($search_type === 'news'){//if search Type is News
+-					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 				}
+ 				else{ //default All
+-					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCUHhGsgkaG5f8lUQ5GVpqAYMCThoGo0kM&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&limitstart=$limitstart&q=$in";
++					$url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCpade2izxXuTQIocvpvgFIrNAqAsaqbj0&cx=001223335659592135423:s4rypv0t30q&alt=json&num=10&q=".$in."&start=".$limitstart."";
+ 				}
+ 				//$date=	date("d M Y");
+ 				$date=	date("Y-m-d h:i:sa");
+@@ -604,7 +604,7 @@
+ 			$this->assignRef('search_results', $search_result);
+ 			/*AAZ ends here*/
+ 
+-        $pageNav = new JPagination( 50, 0, 10 );
++        $pageNav = new JPagination( 100, 0, 10 );
+ 		$this->assignRef('pageNav', $pageNav);
+ 
+         }
+@@ -618,12 +618,12 @@
+ 			$this->assignRef('packageId', $packageId);
+ 
+ 	$pageLimit = 50;
+-	$page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
+-		if( $page > 1  ) {
+-			$limitstart = ($page-1) * $pageLimit;
+-		}else {
+-			$limitstart = 0;
+-		}
++	// $page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
++	// 	if( $page > 1  ) {
++	// 		$limitstart = ($page-1) * $pageLimit;
++	// 	}else {
++	// 		$limitstart = 0;
++	// 	}
+ 							$search_keyword = JRequest::getVar('search'); // search keywords
+ 							$search_params = array('q'=>$search_keywords);
+ 
+@@ -647,7 +647,6 @@
+ 
+ 
+ 		//}
+-
+ 		parent::display($tpl);
+ 	}
+ 

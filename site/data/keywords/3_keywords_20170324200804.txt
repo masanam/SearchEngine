@@ -1,0 +1,15 @@
+Informasi Account Hosting
+Paket Hosting: Profesional Hosting 1GB
+Domain: pasardigital.co.id
+Billing Cycle: Annually
+Jatuh Tempo Berikutnya: 26/08/2017
+
+Login cPanel
+
+URL : http://pasardigital.co.id/cpanel
+Username: pase5467
+Password: n9guM2WTJ2cd35
+*cPanel adalah fasilitas pengelolaan akun hosting berbasis web dimana Anda dapat mengelola akun e-mail, melihat statistik kunjungan, mengelola database, dll.
+
+
+User “pase5467_pasar” was added to the database “pase5467_pasardigital”.

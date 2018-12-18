@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="id" type="hidden"
+		/>
+        <field name="code" type="text"
+               class="inputbox"
+               description="Currency Code"
+               label="Currency Code"
+               required="true"
+               size="20"
+               value="100"
+       />
+        <field name="currency" type="text"
+               class="inputbox"
+               description="Currency Name"
+               label="Currency Name"
+               required="true"
+               size="20"
+               value="100"
+       />
+    </fieldset>
+</form>

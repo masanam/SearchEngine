@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                     readonly="true" class="readonly"
+                     description="JGLOBAL_FIELD_ID_DESC"
+					
+					 /> 
+
+        <field name="refund_packages" type="text"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_REFUND_PACKAGES"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_REFUND_PACKAGES" 
+                        
+                        
+              filter="raw" /> 
+
+        <field name="created" type="calendar"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_CREATED"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_CREATED" 
+              filter="raw" 
+			/> 
+
+        <field name="modified" type="calendar"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_MODIFIED"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_MODIFIED" 
+                        
+                        
+                        
+              filter="raw" /> 
+
+        <field name="distributionstatus" type="text"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_DISTRIBUTIONSTATUS"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_DISTRIBUTIONSTATUS" 
+                                         
+              filter="raw" /> 
+
+        <field name="refundcalculator" type="text"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_REFUNDCALCULATOR"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_REFUNDCALCULATOR" 
+                        
+                        
+                        
+              filter="raw" /> 
+
+        <field name="refund_record" type="text"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_REFUND_RECORD"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_REFUND_RECORD" 
+              filter="raw" /> 
+
+        <field name="publish" type="text"
+                        
+              label="COM_REFUND_FORM_LBL_REFUNDPACKAGELIST_PUBLISH"
+              description="COM_REFUND_FORM_DESC_REFUNDPACKAGELIST_PUBLISH"      
+              filter="raw" />
+			
+        <field name="refund_quota" type="text"
+                       label="COM_REFUND_LBL_REFUND_QUOTA"
+                       description="COM_REFUND_LBL_REFUND_QUOTA"
+                       class="form-refund"
+                       size="30" />
+			
+        <field name="refund_qualifying" type="text"
+                       label="COM_REFUND_LBL_QUALIFYING_EVENTS"
+                       description="COM_REFUND_LBL_QUALIFYING_EVENTS"
+                       value="giftcode,free,random events"
+                       class="form-refund"
+                       size="30" />
+			
+        <field name="refundable_activity" type="text"
+                       label="COM_REFUND_LBL_REFUNDABLE_ACTIVITY"
+                       description="COM_REFUND_LBL_REFUNDABLE_ACTIVITY"
+                       class="form-refund"
+                       size="30" />
+			
+		
+        <field name="valid_from" type="calendar"
+                        
+                label="COM_REFUND_LBL_VALID_FROM"
+                description="COM_REFUND_LBL_VALID_FROM" 
+                class="form-refund"       
+                filter="raw" /> 
+			
+        <field name="valid_to" type="calendar"
+                        
+                       label="COM_REFUND_LBL_VALID_TO"
+                       description="COM_REFUND_LBL_VALID_TO"    
+                       class="form-refund"    
+                       filter="raw" /> 
+			
+        <field name="refund_claim" type="calendar"
+                        
+                       label="COM_REFUND_LBL_CLAIM"
+                       description="COM_REFUND_LBL_CLAIM"    
+                       class="form-refund"    
+                       filter="raw" /> 
+			
+        <field name="condition" type="textarea"
+                       label="COM_REFUND_LBL_CONDITION"
+                       description="COM_REFUND_LBL_CONDITION"
+                       class="inputbox"
+                       rows="3"
+                       cols="30"
+		/>
+			
+    </fieldset>
+		
+
+</form>

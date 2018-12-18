@@ -1,0 +1,16 @@
+.text{
+	width:400px;
+	height:50px;
+}
+
+.menu{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.menu li{
+	list-style:none;
+	float:left;
+	margin-right:25px;
+}

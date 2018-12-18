@@ -1,0 +1,60 @@
+<?php
+/**
+ * @version     1.0.0
+ * @package     com_refund
+ * @copyright   Kadeyasa
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      kadeyasa <asayedaki@yahoo.co.id> - http://kadeyasa.wordpress.com
+ */
+
+// No direct access
+defined('_JEXEC') or die;
+
+/**
+ * Refund helper.
+ */
+class RefundHelper
+{
+	/**
+	 * Configure the Linkbar.
+	 */
+	public static function addSubmenu($vName = '')
+	{
+		JSubMenuHelper::addEntry(
+			JText::_('COM_REFUND_LEGEND_REFUNDPACKAGELIST'),
+			'index.php?option=com_refund&view=refundpackageslist',
+			$vName == 'refundpackageslist'
+		);
+		
+		JSubMenuHelper::addEntry(
+			JText::_('COM_REFUND_REFUND_PACKAGE'),
+			'index.php?option=com_refund&view=refundpackages',
+			$vName == 'refundpackage'
+		);
+
+	}
+
+	/**
+	 * Gets a list of the actions that can be performed.
+	 *
+	 * @return	JObject
+	 * @since	1.6
+	 */
+	public static function getActions()
+	{
+		$user	= JFactory::getUser();
+		$result	= new JObject;
+
+		$assetName = 'com_refund';
+
+		$actions = array(
+			'core.admin', 'core.manage', 'core.create', 'core.edit', 'core.edit.own', 'core.edit.state', 'core.delete'
+		);
+
+		foreach ($actions as $action) {
+			$result->set($action,	$user->authorise($action, $assetName));
+		}
+
+		return $result;
+	}
+}

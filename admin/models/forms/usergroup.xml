@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="id" type="hidden"
+               class="inputbox"
+               description="Enter email address to filter"
+               label="JGLOBAL_EMAIL"
+               size="20"
+		/>
+        <field name="email" type="email"
+               class="inputbox"
+               description="Enter email address to filter"
+               label="JGLOBAL_EMAIL"
+               required="true"
+               size="20"
+               validate="email"
+		/>
+        <field name="population" type="text"
+               class="inputbox"
+               description="Enter population to filter"
+               label="COM_REFUND_LBL_POPULATION"
+               required="true"
+               size="5"
+               validate="numeric"
+               default="100"
+       />
+        <field name="firstname" type="text"
+               class="inputbox"
+               description="Enter first name to filter"
+               label="COM_REFUND_FIRST_NAME"
+               required="true"
+               size="20"
+               value="100"
+       />
+        <field name="lastname" type="text"
+               class="inputbox"
+               description="Enter last name to filter"
+               label="COM_REFUND_LAST_NAME"
+               required="true"
+               size="20"
+               value="100"
+       />
+       <field name="from_age" type="text"
+               class="inputbox"
+               description="Enter from age"
+               label="COM_REFUND_LBL_AGE"
+               required="true"
+               size="5"
+               validate="numeric"
+              
+       />
+       <field name="to_age" type="text"
+               class="inputbox"
+               description="Enter population to filter"
+               label="COM_REFUND_LBL_TO_AGE"
+               required="true"
+               size="5"
+               validate="numeric"
+               
+       />
+       <field name="state" type="text"
+               class="inputbox"
+               description="Enter State/Province"
+               label="COM_REFUND_LBL_STATE"
+               required="true"
+               size="20"
+       />
+       <field name="city" type="text"
+               class="inputbox"
+               description="Enter city"
+               label="COM_REFUND_LBL_CITY"
+               size="20"
+       />
+       <field name="street" type="text"
+               class="inputbox"
+               description="Enter Street"
+               label="Street"
+               size="20"
+       />
+       <field name="post_code" type="text"
+               class="inputbox"
+               description="Post Code"
+               label="Post Code"
+               size="20"
+       />
+    </fieldset>
+</form>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="startlocked" type="text"
+				   class="inputbox"
+				   description="Start Locked Prize Value"
+				   label="Start Locked"
+				   required="true"
+				   size="20"
+			/>
+	</fieldset>
+</form>
